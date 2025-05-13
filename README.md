@@ -36,9 +36,9 @@ If the page starts but doesn't have any account information, double check that t
 ### NOTES ABOUT TRADEOFFS
 
 I spent abooout 4 hours on this. Some tradeoffs were made for the sake of time. In an ideal world, I would have made the following improvements.
- 1) Creating a service for transaction logic, into a service, as well as for recording transactions. 
+ 1) Creating a service for transaction logic, as well as one for recording transactions. 
     This would allow for DRYing up the repeated code in the accounts controller
- 2) Making return types for the routes DTOs, instead of anonymous objects.
+ 2) Making return types for the routes into DTOs, instead of anonymous objects.
  3) Enumerators instead of strings for things like "TransactionType".  
  4) JS Alerts for successful transactions and errors should be replaced by custom component
  5) Logging for failed transactions
