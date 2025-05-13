@@ -1,0 +1,161 @@
+/* ATM Action Buttons */
+.atm-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.action-btn {
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.deposit-btn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.deposit-btn:hover {
+  background-color: #3e8e41;
+}
+
+/* Transaction Flow & Modal */
+.transaction-flow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+}
+
+.account-options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 25px 0;
+}
+
+.account-option-btn {
+  padding: 15px;
+  font-size: 18px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.account-option-btn:hover {
+  border-color: #4CAF50;
+  background-color: #f0f9f0;
+}
+
+.amount-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 25px 0;
+}
+
+.dollar-sign {
+  font-size: 24px;
+  margin-right: 5px;
+}
+
+.amount-input input {
+  font-size: 24px;
+  padding: 10px;
+  width: 150px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.submit-btn, .back-btn, .cancel-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit-btn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.back-btn {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.cancel-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+
+/* TRANSACTION HISTORY */
+
+.transaction-history {
+  margin-top: 70px;
+}
+
+.transaction-list {
+  list-style: none;
+  padding: 0;
+}
+
+.transaction-item {
+  border-bottom: 1px solid #646161;
+  padding: 7px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.transaction-type {
+  font-weight: bold;
+  width: 100px;
+}
+
+.transaction-amount {
+  width: 100px;
+  text-align: right;
+}
+
+.transaction-date {
+  color: #666;
+  font-size: 0.9em;
+  width: 200px;
+}
+
+.transfer-info {
+  color: #666;
+  flex-grow: 1;
+}
