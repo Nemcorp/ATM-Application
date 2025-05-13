@@ -12,7 +12,7 @@ namespace ATM.API.Data
         
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            // Seed with dummy data
+            // just some dummy data for our user account.
             modelBuilder.Entity<Account>().HasData(
                 new Account { Id = 1, Type = "Checking", Balance = 1000 },
                 new Account { Id = 2, Type = "Savings", Balance = 7000 }

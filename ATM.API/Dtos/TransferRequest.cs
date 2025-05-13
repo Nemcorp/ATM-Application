@@ -2,7 +2,7 @@
 {
     public class TransferRequest
     {
-        public int targetAccountId { get; set; }
+        public int TargetAccountId { get; set; }
         public decimal Amount { get; set; }
     }
 

@@ -88,7 +88,7 @@ namespace ATM.API.Controllers
         public async Task<ActionResult<object>> Transfer(int accountId, [FromBody] TransferRequest transferRequest)
         {
             var sourceAccount = await _context.Accounts.FindAsync(accountId);
-            var targetAccount = await _context.Accounts.FindAsync(transferRequest.targetAccountId);
+            var targetAccount = await _context.Accounts.FindAsync(transferRequest.TargetAccountId);
             if (sourceAccount == null || targetAccount == null) { return NotFound(); }
             if (transferRequest.Amount < 0.01m) { return BadRequest("Transfer amount can not be negative"); }
             if (transferRequest.Amount > sourceAccount.Balance) { return BadRequest("Transfer amount exceeds balance."); }
@@ -102,7 +102,7 @@ namespace ATM.API.Controllers
               new Transaction
               {
                   SourceAccountId = accountId,
-                  TargetAccountId = transferRequest.targetAccountId,
+                  TargetAccountId = transferRequest.TargetAccountId,
                   Amount = transferRequest.Amount,
                   TransactionType = "Transfer",
                   Timestamp = DateTime.Now
